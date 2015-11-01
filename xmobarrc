@@ -1,0 +1,25 @@
+Config { font = "xft:Droid Sans Mono:style=Regular:pixelsize=14"
+       , borderColor = "#002b36"
+       , border = NoBorder
+       , bgColor = "#002b36"
+       , fgColor = "#657b83"
+       , position = TopSize C 100 14
+       , lowerOnStart = True
+       , hideOnStart = False
+       , persistent = True
+       , overrideRedirect = True
+       , allDesktops = True
+       , commands = [ Run Network "wlp3s0" ["-L", "0", "-H", "32", "--normal", "green", "--high", "red"] 10       
+                      ,Run Network "enp0s25" ["-L", "0", "-H", "32", "--normal", "green", "--high", "red"] 10
+		      , Run Cpu ["-L", "3", "-H", "50", "--normal", "green", "--high", "red"] 10
+		      , Run Memory ["-t", "Mem: <usedratio>%"] 10
+		      , Run Swap [] 10
+		      , Run Com "uname" ["-s", "-r"] "" 36000
+		      , Run Date "%a %b %_d %Y %H:%M:%S" "date" 10
+		      , Run StdinReader
+                      , Run CommandReader "~/.pymodoro/pymodoro.py" "pomodoro"			
+		      ]
+	, sepChar = "%"
+	, alignSep = "}{"
+	, template = "%StdinReader% | %cpu% | %memory% * %swap% | %wlp3s0% %enp0s25% | %pomodoro% }{<fc=#ee9a00>%date%</fc> | %uname% "
+	}
