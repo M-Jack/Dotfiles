@@ -7,6 +7,7 @@ xscreensaver -no-splash &         # starts screensaver daemon
 xsetroot -cursor_name left_ptr &  # sets the cursor icon
 udiskie -C -0 -a -n -s -P &
 cbatticon & # icon for the battery usage
+blueman-applet & # Bluetooth applet
 
 feh --bg-scale ~/.background.jpg &
 

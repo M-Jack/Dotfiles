@@ -8,7 +8,7 @@ dockapp_mode none
 
 fuzzy_edges 0
 
-geometry 15x1-380+0
+geometry 4x1-380+0
 
 grow_gravity NE
 
@@ -22,7 +22,6 @@ kludges force_icons_size
 
 # max_geometry <geometry>    # maximal tray dimensions; 0 in width/height means
                              # no limit
-max_geometry 15x1-325-10
 
 no_shrink false
 

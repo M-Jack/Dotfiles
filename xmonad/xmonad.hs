@@ -32,7 +32,7 @@ appManageHook = composeAll $ concat [
                            [className =? app --> doShift "video"| app <- videoApp],
                            [className =? app --> doShift "games"| app <- gamesApp]
                           ]
-    where webApp = ["Firefox", "Inox"]
+    where webApp = ["Firefox", "Inox", "Chromium"]
           mailApp = ["Thunderbird"]
           musicApp = ["Spotify"]
           steamApp = ["Steam"]
@@ -61,7 +61,7 @@ myMod = mod4Mask
 --Start up configuration
 
 myStartUp  = do
-    spawn "inox"
+    spawn "chromium"
     spawn "thunderbird"
 
 
