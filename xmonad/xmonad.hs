@@ -61,8 +61,7 @@ myMod = mod4Mask
 --Start up configuration
 
 myStartUp  = do
-    spawn "inox"
-    spawn "thunderbird"
+    spawn "chromium"
 
 
 main = do

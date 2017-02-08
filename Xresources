@@ -40,3 +40,6 @@ URxvt*letterSpace: -1
 ! No scrollbar
 
 URxvt.scrollBar: false
+
+! Cursor-theme
+Xcursor.theme: Neutral

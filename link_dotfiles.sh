@@ -2,7 +2,7 @@
 
 echo "Hello world!"
 BASEDIR=$(dirname "$0")
-NOT_LINK_LIST="LICENSE README.md link_dotfiles.sh background.jpg"
+NOT_LINK_LIST="LICENSE README.md link_dotfiles.sh"
 
 to_copy (){
 	for NOT_LINK_NAME in $NOT_LINK_LIST
@@ -28,7 +28,7 @@ do
 		then
 			echo "$TARGET already points to $FILE_PATH"
 		else
-			ln -svi $FILE_PATH "$TARGET"
+			ln -svi "$FULL_FILE_PATH" "$TARGET"
 		fi
 	fi
 done
