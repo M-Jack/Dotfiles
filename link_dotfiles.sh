@@ -21,6 +21,14 @@ do
 	FILE_NAME=$(basename $FILE_PATH)
 	if to_copy $FILE_NAME
 	then
-		ln -svi $FILE_PATH "$HOME/.$FILE_NAME"
+		TARGET="$HOME/.$FILE_NAME"
+		RESOLVE_LINK=$(readlink $TARGET)
+		FULL_FILE_PATH=$(readlink -f $FILE_PATH)
+		if [ $RESOLVE_LINK = $FULL_FILE_PATH ]
+		then
+			echo "$TARGET already points to $FILE_PATH"
+		else
+			ln -svi $FILE_PATH "$TARGET"
+		fi
 	fi
 done
