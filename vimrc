@@ -35,21 +35,6 @@ call glaive#Install()
 set number
 :imap jk <Esc> " Remap the terribly far away
 
-syntax enable
-set background=dark
-colorscheme solarized
-" Default syntastic params
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
-
-" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<c-b>"
-let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 " Rust pref
 let g:rustfmt_autosave = 1
 autocmd FileType rust let g:syntastic_rust_checkers = ['rustc']
