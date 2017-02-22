@@ -32,6 +32,7 @@ call vundle#end()            " required
 
 call glaive#Install()
 
+"let g:airline_powerline_fonts = 1
 set number
 :imap jk <Esc> " Remap the terribly far away
 

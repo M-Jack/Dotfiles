@@ -32,8 +32,7 @@ URxvt*color15:                #fdf6e3
 
 ! Terminal font
 
-URxvt.font: xft:Droid Sans Mono:style=Regular:pixelsize=16
-URxvt.boldFont:  xft:Droid Sans Mono:style=Bold:pixelsize=14
+URxvt.font: xft:monospace
 
 URxvt*letterSpace: -1
 
@@ -43,3 +42,8 @@ URxvt.scrollBar: false
 
 ! Cursor-theme
 Xcursor.theme: Neutral
+
+! Clickable link
+URxvt.perl-ext-common: default,matcher
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.matcher.button: 1
