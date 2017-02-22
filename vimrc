@@ -24,15 +24,21 @@ Plugin 'SirVer/ultisnips'
 " Snippets are separated from the engine. Add this if you want them:
 Plugin 'honza/vim-snippets'
 
-" airline bars
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+
 
 call vundle#end()            " required
 
 call glaive#Install()
 
-"let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts = 0
+let g:airline_symbols = {}
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+
 set number
 :imap jk <Esc> " Remap the terribly far away
 

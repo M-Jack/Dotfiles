@@ -4,7 +4,6 @@
 export TERM="xterm-256color"
 
 source /usr/share/zsh/scripts/antigen/antigen.zsh
-source /usr/lib/python3.6/site-packages/powerline/bindings/zsh/powerline.zsh
 
 antigen use oh-my-zsh
 
@@ -13,7 +12,7 @@ antigen bundle command-not-found
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle common-aliases
 antigen bundle thefuck
-antigen theme bhilburn/powerlevel9k powerlevel9k
+antigen theme bureau
 
 antigen apply
 
