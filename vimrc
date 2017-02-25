@@ -1,6 +1,6 @@
-set nocompatible              " be iMproved, required
+set nocompatible
 
-" set the runtime path to include Vundle and initialize
+" set the runtime path to in Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
@@ -13,10 +13,8 @@ Plugin 'tpope/vim-sensible'
 Plugin 'google/vim-maktaba'
 Plugin 'google/vim-codefmt'
 Plugin 'google/vim-glaive'
-Plugin 'flazz/vim-colorschemes'
 Plugin 'vim-syntastic/syntastic'
 Plugin 'rust-lang/rust.vim'
-Plugin 'tpope/vim-vividchalk'
 
 " Track the engine.
 Plugin 'SirVer/ultisnips'
@@ -27,20 +25,30 @@ Plugin 'honza/vim-snippets'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
+Plugin 'valloric/youcompleteme'
+
 
 call vundle#end()            " required
 
 call glaive#Install()
 
+" Common set up
+set number
+:imap jk <Esc> " Remap the terribly far away
+let mapleader = ','
+
+" remove trailing whitespace
+nnoremap <Leader>rtw :%s/\s\+$//e<CR>
+
+
+" Make ariline simpler again
 let g:airline_powerline_fonts = 0
 let g:airline_symbols = {}
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
-
-set number
-:imap jk <Esc> " Remap the terribly far away
+let g:airline_theme = 'solarized'
 
 " Rust pref
 let g:rustfmt_autosave = 1
