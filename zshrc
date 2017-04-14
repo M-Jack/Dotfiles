@@ -3,7 +3,8 @@
 
 export TERM="xterm-256color"
 
-source /usr/share/zsh/scripts/antigen/antigen.zsh
+source /usr/share/zsh/share/antigen.zsh
+
 
 antigen use oh-my-zsh
 
@@ -25,4 +26,4 @@ alias backup='rsync -aAXv --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/
 alias backup-hdd='rsync -aAXv /run/media/bastien/encrypted/* /run/media/bastien/backup/hdd/encrypted' 
 alias sudo='sudo '
 
-PATH=~/bin:~/.cabal/bin:$PATH
+PATH=~/bin:~/.gem/ruby/2.4.0/bin:$PATH
