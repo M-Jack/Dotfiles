@@ -57,3 +57,10 @@ let g:syntastic_rust_rustc_fname = ''
 let g:syntastic_rust_rustc_args = '--'
 let g:syntastic_rust_checkers = ['rustc']
 autocmd FileType rust let g:syntastic_rust_checkers = ['rustc']
+
+
+" Fuzzy finder
+
+set path+=**
+set wildmenu
+
