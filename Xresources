@@ -32,7 +32,7 @@ URxvt*color15:                #fdf6e3
 
 ! Terminal font
 
-URxvt.font: xft:monospace
+URxvt.font: xft:monospace:size=11
 
 URxvt*letterSpace: -1
 
