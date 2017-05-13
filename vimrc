@@ -56,7 +56,6 @@ let g:syntastic_rust_rustc_exe = 'cargo check'
 let g:syntastic_rust_rustc_fname = ''
 let g:syntastic_rust_rustc_args = '--'
 let g:syntastic_rust_checkers = ['rustc']
-autocmd FileType rust let g:syntastic_rust_checkers = ['rustc']
 
 
 " Fuzzy finder
@@ -64,3 +63,22 @@ autocmd FileType rust let g:syntastic_rust_checkers = ['rustc']
 set path+=**
 set wildmenu
 
+" Auto code formatting on save
+augroup autoformat_settings
+  autocmd FileType bzl AutoFormatBuffer buildifier
+  autocmd FileType c,cpp,proto,javascript AutoFormatBuffer clang-format
+  autocmd FileType dart AutoFormatBuffer dartfmt
+  autocmd FileType go AutoFormatBuffer gofmt
+  autocmd FileType gn AutoFormatBuffer gn
+  autocmd FileType html,css,json AutoFormatBuffer js-beautify
+  autocmd FileType java AutoFormatBuffer google-java-format
+  autocmd FileType python AutoFormatBuffer yapf
+  autocmd FileType rust let g:syntastic_rust_checkers = ['rustc']
+  " Alternative: autocmd FileType python AutoFormatBuffer autopep8
+augroup END
+
+
+" tabs
+set tabstop=2
+set shiftwidth=2
+set expandtab
